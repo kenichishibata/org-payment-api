@@ -1,29 +1,30 @@
 var restify = require('restify');
 var server = require('./app');
+var mongojs = require ('mongojs');
+var ObjectId = mongojs.ObjectId;
 
 var client = restify.createJsonClient({
     url: 'http://localhost:3000'
 });
 
 var testUser = {
-    _id: '561618d67599b2e6241cb5d6',
-    name: 'Justin Regondola bekla',
-    // // name : "Justin Regondola Bading",
-    studentNumber: '09409234',
-    course: 'Computer Science',
-    yearLevel: 'IV',
-    address: 'Sitio di matapuan'
+  // $set:
+  // {
+    "name" : "procopio magalpok",
+    "yearLevel" : "IX"
+  // }
 };
-
- testUser.yearLevel = "VII",
- client.put('/user/' + testUser.id,testUser, function (err, req, res, status) {
+// console.log(process.argv[2]);
+testUser._id = process.argv[2];
+// console.log('----');
+// console.log(testUser._id);
+ client.put('/user/'+testUser._id, testUser , function (err, req, res, status) {
     if (err) {
         console.log("An error ocurred >>>>>>");
         console.log(err);
     } else {
-        console.log('id : '+testUser.id);
+        console.log('id : '+testUser._id);
         console.log('User updated >>>>>>>');
         console.log(status);
     }
-
 });
