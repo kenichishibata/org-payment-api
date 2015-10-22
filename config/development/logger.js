@@ -1,0 +1,5 @@
+
+{
+  "stream": "process.stdout,",
+  "logLevel" : "info"
+}

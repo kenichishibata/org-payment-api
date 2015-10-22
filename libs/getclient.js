@@ -1,5 +1,6 @@
+#! /usr/bin/env node
+
 var restify = require('restify');
-var server = require('./app');
 
 var client = restify.createJsonClient({
     url: 'http://localhost:3000'
@@ -17,3 +18,4 @@ client.get('/user', function (err, req, res, user) {
 	    console.log(user);
 	}
 });
+
