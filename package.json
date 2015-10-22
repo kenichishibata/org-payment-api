@@ -2,7 +2,7 @@
   "name": "Organizational-Payment",
   "version": "0.1.0",
   "scripts": {
-    "start": "node index.js",
+    "start": "node libs/app.js",
     "test": "gulp lint"
   },
   "preferGlobal": true,
