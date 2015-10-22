@@ -12,12 +12,12 @@ This is originally designed to be an API using restify and nodejs. However there
 To use
 
 1. Install first mongodb completely.
-..* Then run mongod to start the mongo database.
+* Then run mongod to start the mongo database.
 2. Install node js and npm
-..* To check if they are installed run node -v and npm -v in your terminal or command prompt
+* To check if they are installed run node -v and npm -v in your terminal or command prompt
 3. Run npm install
 4. Run sudo npm link
-..* This will link the javascript files to cli commands.
+* This will link the javascript files to cli commands.
 5. Run org to start the server
 
 ## Commands
