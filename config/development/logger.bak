@@ -1,0 +1,14 @@
+{"streams":
+  [
+    {
+    "stream": "process.stdout",
+    "logLevel": "info"
+    }
+  ],
+
+"serializers":
+    {
+      "req": "bunyan.stdSerializers.req",
+      "err": "bunyan.stdSerializers.err"
+    }
+}
