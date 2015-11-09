@@ -10,12 +10,6 @@ TO PUT
 localhost:3000/user/kenichi?name=kenichi1&studentNumber=1223453333336&course=compsci&yearLevel=i&address=legazpi&organizationalFee=unpaid&contribution=100&sportsFee=1453&partyFee=1million&specialFee1=special1&specialFee2=spec2
 ```
 
-
-## Version 0.5
-
-Version 0.5 is now released! No one is using this. I'm just doing this for fun. Maybe someone will if there is actually a frontend. Anyway. I made the server using restify and we can call this using POSTMAN (or curl if you are feeling brave) for GET POST and DELETE PUT.
-This still runs mongodb in your local machine. So you need it to be installed first :) and obviously node. If you started the server first without starting the database you need to run the database and then restart it. Sorry havent made swagger file for this. I will do it in version 1.0 I promise :).
-
 ## Version 0.5
 
 Version 0.5 is now released! No one is using this. I'm just doing this for fun. Maybe someone will if there is actually a frontend. Anyway. I made the server using restify and we can call this using POSTMAN (or curl if you are feeling brave) for GET POST and DELETE PUT.
