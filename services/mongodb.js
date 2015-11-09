@@ -117,9 +117,9 @@ function delOneFromTable(req,res,name){
   });
 }
 
-function putToTableHead(req,res){
+function putTable(req,res,name){
   db.Student.findOne({
-      _id: db.ObjectId(req.params.id)
+      name: name
   }, function(err, data) {
       //merge req.params/product with the server/product
 
@@ -135,11 +135,11 @@ function putToTableHead(req,res){
           updProd[m] = req.params[m];
       }
       delete updProd._id;
-      db.Student.update({_id: db.ObjectId(req.params.id)}, updProd, {multi: false}, function(err, data) {
+      db.Student.update({name: name}, updProd, {multi: false}, function(err, data) {
           res.writeHead(200, {'Content-Type' : 'application/json; charset=utf-8'});
           res.end(JSON.stringify(updProd));
       });
-    });  
+    });
 }
 //
 // function putToTableBody(){
@@ -155,10 +155,10 @@ function searchByName(req,res,paramName){
   });
 }
 
-// module.exports.createConnection = 'connect';
 module.exports.getAll = getAll;
 module.exports.addToTable = addToTable;
 module.exports.getByName = getByName;
 module.exports.delAllFromTable = delAllFromTable;
 module.exports.delOneFromTable = delOneFromTable;
 module.exports.searchByName = searchByName;
+module.exports.putTable = putTable;

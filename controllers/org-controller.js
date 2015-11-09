@@ -56,10 +56,10 @@ function postData (req,res,next){
 
  }
 
- function updateData (req,res,next){
-   log.info('200 OK')
-   res.setHeader('Content-Type','application/json');
-   res.status(200);
+ function update (req,res,next){
+   var paramName = req.params.name;
+   console.log(paramName + '= update this name');
+   data.putTable(req,res,paramName);
  }
 
 module.exports.getAllData = getAllData;
@@ -68,3 +68,4 @@ module.exports.getByNameData = getByNameData;
 module.exports.delAllData = delAllData;
 module.exports.delData = delData;
 module.exports.search = search;
+module.exports.update = update;

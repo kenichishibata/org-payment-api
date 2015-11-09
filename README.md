@@ -63,7 +63,7 @@ localhost:3000/user/search/partialname
 TO PUT
 
 ```
-not yet implemented
+localhost:3000/user/kenichi?name=kenichi1&studentNumber=1223453333336&course=compsci&yearLevel=i&address=legazpi&organizationalFee=unpaid&contribution=100&sportsFee=1453&partyFee=1million&specialFee1=special1&specialFee2=spec2
 ```
 
 

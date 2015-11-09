@@ -9,4 +9,5 @@ server.get('/user/search/:name',controller.search);
 server.post('/user',controller.postData);
 server.del('/user',controller.delAllData);
 server.del('/user/:name',controller.delData);
+server.put('/user/:name',controller.update);
 };
