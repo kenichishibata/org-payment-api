@@ -1,9 +1,77 @@
 # org-payment-api
 An API for school fees org payments
 
+## Version 1.5
+
+Version 1.5 is now released! No one is using this. I'm just doing this for fun. Maybe someone will if there is actually a frontend. Anyway. I made the server using restify and we can call this using POSTMAN (or curl if you are feeling brave) for GET POST and DELETE PUT.
+This still runs mongodb in your local machine. So you need it to be installed first :) and obviously node. If you started the server first without starting the database you need to run the database and then restart it. Sorry havent made swagger file for this. I will do it in version 2.0 I promise :).
+
+This uses M(V)C approach without the View (since we are doing API). Model is the services mongodb.js (DAO)
+The directory for restify server:
+```
+index.js
+config/
+  development/
+node_modules/
+routes/
+services/
+controllers/
+```
+Other libs are for use by NPM link type server not the restify server.
+
+To use
+
+```
+mongod
+npm install
+node index (or if you have nodemon instaled use nodemon index)
+```
+The server should be running and saying something like
+```
+[nodemon] 1.8.1
+[nodemon] to restart at any time, enter `rs`
+[nodemon] watching: *.*
+[nodemon] starting `node index index.js`
+[2015-11-09T00:45:00.297Z]  INFO: org-payment/1450 on m-FR15080001JP.local: enabling CORS
+Server started.
+[2015-11-09T00:45:00.394Z]  INFO: org-payment/1450 on m-FR15080001JP.local: org-payment listening at http://[::]:3000
+
+```
+To GET all
+```
+localhost:3000/user (postman)
+```
+
+To GET one
+```
+localhost:3000/user/name (exact match)
+```
+
+TO POST
+```
+localhost:3000/user?name=ken&studentNumber=123456&course=compsci&yearLevel=i&address=legazpi&organizationalFee=unpaid&contribution=100&sportsFee=1453&partyFee=1million&specialFee1=special1&specialFee2=spec2
+```
+TO DEL
+```
+localhost:3000/user/name (exact match)
+```
+
+TO SEARCH
+```
+localhost:3000/user/search/partialname
+```
+TO PUT
+
+```
+not yet implemented
+```
+
+
 ## Version 1.0
 
 Version 1.0 is now released!
+
+This is a npm link type server (terminal type server not meant for front end implementation not an API)
 
 This is originally designed to be an API using restify and nodejs. However there is also a CLI based command to manipulate the data. This utilizes mongodb for database storage. For now there is no front end GUI implementation. If he ever finds time then he will implement it using angularJS or ReactJS but that is highly unlikely. So you could help out send a pull request for front end implementation :smile:
 
