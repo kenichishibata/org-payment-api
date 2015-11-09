@@ -109,7 +109,7 @@ var schema = [
 
   prompt.prompt(schema, function (result) {
     console.log("\nStudent updated:");
-    if (err){ throw err; console.log('error occured exiting'); process.exit(1);}
+    if (err){ console.log('error occured exiting'); throw err;}
 
  client.put('/user/'+testUser._id, result , function (err, req, res, status) {
     if (err) {

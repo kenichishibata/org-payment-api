@@ -8,12 +8,12 @@ var collection = ['Student'];
 db = mongojs(dbase,collection);
 
 db.on('error', function (err) {
-    console.log('database error', err)
-})
+    console.log('database error', err);
+});
 
 db.on('connect', function () {
-    console.log('database connected')
-})
+    console.log('database connected');
+});
 
 // Server
 var server = restify.createServer();
@@ -49,7 +49,7 @@ server.listen(3000, function () {
 
 });
 // get
-server.get('/user',function (req,res,next) {
+function something(req,res,next) {
   db.Student.find(function (err, Student) {
     // if (err){
     //   console.log('error'+err);
@@ -60,7 +60,9 @@ server.get('/user',function (req,res,next) {
     // }
     });
     return next();
-});
+}
+
+server.get('/user', something);
 
 server.get('/user/:id',function (req,res,next) {
     db.Student.findOne({_id: db.ObjectId(req.params.id)}, function(err, data) {
@@ -92,8 +94,8 @@ server.put("/user/:id", function(req, res, next) {
 
         var updProd = {};
         for(var n in data) {
-
             updProd[n] = data[n];
+            // console.log('updProd ['+n+']'+'= '+updProd[n]);
         }
         for(var m in req.params) {
             updProd[m] = req.params[m];

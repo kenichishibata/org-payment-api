@@ -1,0 +1,4 @@
+{
+  "database" : "mongodb://localhost/org-payment",
+  "collection" : "['Student']"
+}
