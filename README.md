@@ -1,6 +1,16 @@
 # org-payment-api
 An API for school fees org payments
 
+##Version 1.5.1
+Added PUT
+
+TO PUT
+
+```
+localhost:3000/user/kenichi?name=kenichi1&studentNumber=1223453333336&course=compsci&yearLevel=i&address=legazpi&organizationalFee=unpaid&contribution=100&sportsFee=1453&partyFee=1million&specialFee1=special1&specialFee2=spec2
+```
+
+
 ## Version 1.5
 
 Version 1.5 is now released! No one is using this. I'm just doing this for fun. Maybe someone will if there is actually a frontend. Anyway. I made the server using restify and we can call this using POSTMAN (or curl if you are feeling brave) for GET POST and DELETE PUT.
@@ -63,7 +73,7 @@ localhost:3000/user/search/partialname
 TO PUT
 
 ```
-localhost:3000/user/kenichi?name=kenichi1&studentNumber=1223453333336&course=compsci&yearLevel=i&address=legazpi&organizationalFee=unpaid&contribution=100&sportsFee=1453&partyFee=1million&specialFee1=special1&specialFee2=spec2
+Not yet implemented
 ```
 
 
