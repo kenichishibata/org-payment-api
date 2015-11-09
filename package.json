@@ -2,7 +2,9 @@
   "name": "Organizational-Payment",
   "version": "0.1.0",
   "scripts": {
-    "start": "node libs/app.js",
+    "prestart": "mongod",
+    "start": "node index.js",
+    "poststart": "mongo use admin --eval 'db.shutdownServer()'",
     "test": "gulp lint"
   },
   "preferGlobal": true,
@@ -11,20 +13,21 @@
     "inquirer": "^0.10.1",
     "mongojs": "^1.4.0",
     "node-config-manager": "^1.0.2",
+    "prettyjson": "^1.1.3",
     "prompt": "^0.2.14",
     "restify": "*",
     "yesno": "0.0.1"
   },
-  "bin" : {
-    "org" : "libs/app.js",
-    "org-g" : "libs/getoneclient.js",
-    "org-g-all" : "libs/getclient.js",
-    "org-add" : "libs/postclient.js",
-    "org-del" : "libs/delclient.js",
-    "org-del-all" : "libs/delallclient.js",
-    "org-pay" : "libs/payfee.js",
-    "org-edit" : "libs/putclient.js",
-    "org-sms" : "libs/search.js"
+  "bin": {
+    "org": "libs/app.js",
+    "org-g": "libs/getoneclient.js",
+    "org-g-all": "libs/getclient.js",
+    "org-add": "libs/postclient.js",
+    "org-del": "libs/delclient.js",
+    "org-del-all": "libs/delallclient.js",
+    "org-pay": "libs/payfee.js",
+    "org-edit": "libs/putclient.js",
+    "org-sms": "libs/search.js"
   },
   "devDependencies": {
     "gulp-jshint": "^1.11.2"

@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 var restify = require('restify');
-
+var p = require('prettyjson');
 var client = restify.createJsonClient({
     url: 'http://localhost:3000'
 });
@@ -15,7 +15,7 @@ client.get('/user', function (err, req, res, user) {
 	} else {
 	    console.log("Total users " + user.length);
 	    console.log('All users >>>>>>>');
-	    console.log(user);
+	    p.render(console.log(JSON.stringify(user)));
 	}
 });
 
