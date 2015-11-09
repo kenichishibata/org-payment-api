@@ -1,7 +1,7 @@
 # org-payment-api
 An API for school fees org payments
 
-##Version 1.5.1
+##Version 0.5.1
 Added PUT
 
 TO PUT
@@ -11,7 +11,7 @@ localhost:3000/user/kenichi?name=kenichi1&studentNumber=1223453333336&course=com
 ```
 
 
-## Version 1.5
+## Version 0.5
 
 Version 1.5 is now released! No one is using this. I'm just doing this for fun. Maybe someone will if there is actually a frontend. Anyway. I made the server using restify and we can call this using POSTMAN (or curl if you are feeling brave) for GET POST and DELETE PUT.
 This still runs mongodb in your local machine. So you need it to be installed first :) and obviously node. If you started the server first without starting the database you need to run the database and then restart it. Sorry havent made swagger file for this. I will do it in version 2.0 I promise :).
@@ -77,7 +77,7 @@ Not yet implemented
 ```
 
 
-## Version 1.0
+## Version 0.1
 
 Version 1.0 is now released!
 
