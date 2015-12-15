@@ -1,3 +1,5 @@
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/5f18da375c834c189221d053978b9005)](https://www.codacy.com/app/kenichi-shibata/org-payment-api)
+
 # org-payment-api
 An API for school fees org payments
 
