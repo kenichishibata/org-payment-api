@@ -30,6 +30,8 @@
     "org-sms": "libs/search.js"
   },
   "devDependencies": {
-    "gulp-jshint": "^1.11.2"
+    "gulp-jshint": "^1.11.2",
+    "gulp": "*",
+    "jshint" : "*"
   }
 }
