@@ -1,7 +1,7 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/grade/5f18da375c834c189221d053978b9005)](https://www.codacy.com/app/kenichi-shibata/org-payment-api)
 [![dependencies](https://david-dm.org/kenichishibata31/org-payment-api.svg)](https://david-dm.org/kenichishibata31/org-payment-api)
 [![Build Status](https://travis-ci.org/kenichishibata31/org-payment-api.svg)](https://travis-ci.org/kenichishibata31/org-payment-api)
-
+[![Coverage Status](https://coveralls.io/repos/kenichishibata31/org-payment-api/badge.svg?branch=master&service=github)](https://coveralls.io/github/kenichishibata31/org-payment-api?branch=master)
 #Announcement
 
 
