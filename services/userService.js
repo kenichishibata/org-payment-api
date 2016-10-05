@@ -17,6 +17,29 @@ var log = bunyan.createLogger({
   serializers : bunyan.stdSerializers
 });
 
+function headCreator(req){
+	var parameters = {
+		name: req.query.name,
+		studentNumber: req.query.studentNumber,
+		course: req.query.course,
+		yearLevel: req.query.yearLevel,
+		address: req.query.address
+	}
+  return parameters;
+}
+
+function bodyCreator(req){
+	var parameters = {
+	  organizationalFee: req.query.organizationalFee,
+	  contribution: req.query.contribution,
+	  sportsFee: req.query.sportsFee,
+	  partyFee: req.query.partyFee,
+	  specialFee1: req.query.specialFee1,
+	  specialFee2: req.query.specialFee2
+	}
+  return parameters;
+}
+
 function creator(req){
 	var parameters = {
 		user: headCreator(req),
@@ -25,27 +48,6 @@ function creator(req){
   return parameters;
 }
 
-function headCreator(req){
-	var parameters = {
-		name: req.params.name,
-		studentNumber: req.params.studentNumber,
-		course: req.params.course,
-		yearLevel: req.params.yearLevel,
-		address: req.params.address
-	}
-  return parameters;
-}
 
-function bodyCreator(req){
-	var parameters = {
-	  organizationalFee: req.params.organizationalFee,
-	  contribution: req.params.contribution,
-	  sportsFee: req.params.sportsFee,
-	  partyFee: req.params.partyFee,
-	  specialFee1: req.params.specialFee1,
-	  specialFee2: req.params.specialFee2
-	}
-  return parameters;
-}
 
 module.exports.creator = creator;

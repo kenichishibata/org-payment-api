@@ -67,6 +67,7 @@ function getByName(req,res,name){
 }
 
 function addToTable(req,res,fs){
+	console.log(JSON.stringify(fs));
   db.Student.insert(fs, function(err,data){
     if(err){
       log.error('400'+err);
@@ -138,11 +139,7 @@ function putTable(req,res,name){
       });
     });
 }
-//
-// function putToTableBody(){
-//
-// }
-//
+
 function searchByName(req,res,paramName){
   db.Student.find({name: {$regex : paramName} }, function(err, data) {
     if (err) throw err;
