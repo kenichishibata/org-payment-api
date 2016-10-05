@@ -1,9 +1,7 @@
 /* jshint node: true */
 
 'use strict';
-var restify, mongojs, configManager, dbConfig, loggerConfig, bunyan, prettify, pretty, dbCol;
-
-restify          = require('restify');
+var mongojs, configManager, dbConfig, loggerConfig, bunyan, prettify, pretty, dbCol;
 mongojs          = require('mongojs');
 configManager    = require('node-config-manager');
 dbConfig         = configManager.getConfig('db');
