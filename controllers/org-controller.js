@@ -30,14 +30,11 @@ function postData (req,res,next){
   console.log(parameters);
   data.addToTable(req,res,parameters);
 }
-//
+
  function getByNameData(req,res,next){
    var name = req.params.name;
    data.getByName(req,res,name);
  }
- // function getByIdData(req,res,next){
- //
- // }
 
  function delData (req,res,next){
    var name = req.params.name;
@@ -50,14 +47,12 @@ function postData (req,res,next){
 
  function search (req,res,next){
    var paramName = req.params.name;
-   console.log(paramName  +' = paramName');
    data.searchByName(req,res,paramName);
 
  }
 
  function update (req,res,next){
    var paramName = req.params.name;
-   console.log(paramName + '= update this name');
    data.putTable(req,res,paramName);
  }
 

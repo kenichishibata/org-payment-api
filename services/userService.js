@@ -18,40 +18,33 @@ var log = bunyan.createLogger({
 });
 
 function creator(req){
-
-  var name = req.params.name;
-  var studentNumber = req.params.studentNumber;
-  var course = req.params.course;
-  var yearLevel = req.params.yearLevel;
-  var address = req.params.address;
-  var organizationalFee = req.params.organizationalFee;
-  var contribution = req.params.contribution;
-  var sportsFee = req.params.sportsFee;
-  var partyFee = req.params.partyFee;
-  var specialFee1 = req.params.specialFee1;
-  var specialFee2 = req.params.specialFee2;
-  var parameters = {"name":name,"studentNumber":studentNumber, "course":course,"yearLevel":yearLevel,"address":address,"organizationalFee":organizationalFee,"contribution":contribution,"sportsFee":sportsFee,"partyFee":partyFee,"specialFee1":specialFee1,"specialFee2":specialFee2};
+	var parameters = {
+		user: headCreator(req),
+		payment: bodyCreator(req)
+	}
   return parameters;
 }
 
 function headCreator(req){
-  var name = req.params.name;
-  var studentNumber = req.params.studentNumber;
-  var course = req.params.course;
-  var yearLevel = req.params.yearLevel;
-  var address = req.params.address;
-  var parameters = {"name":name,"studentNumber":studentNumber, "course":course,"yearLevel":yearLevel,"address":address};
+	var parameters = {
+		name: req.params.name,
+		studentNumber: req.params.studentNumber,
+		course: req.params.course,
+		yearLevel: req.params.yearLevel,
+		address: req.params.address
+	}
   return parameters;
 }
 
 function bodyCreator(req){
-  var organizationalFee = req.params.organizationalFee;
-  var contribution = req.params.contribution;
-  var sportsFee = req.params.sportsFee;
-  var partyFee = req.params.partyFee;
-  var specialFee1 = req.params.specialFee1;
-  var specialFee2 = req.params.specialFee2;
-  var parameters = {"organizationalFee":organizationalFee,"contribution":contribution,"sportsFee":sportsFee,"partyFee":partyFee,"specialFee1":specialFee1,"specialFee2":specialFee2};
+	var parameters = {
+	  organizationalFee: req.params.organizationalFee,
+	  contribution: req.params.contribution,
+	  sportsFee: req.params.sportsFee,
+	  partyFee: req.params.partyFee,
+	  specialFee1: req.params.specialFee1,
+	  specialFee2: req.params.specialFee2
+	}
   return parameters;
 }
 
