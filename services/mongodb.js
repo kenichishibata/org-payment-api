@@ -34,18 +34,18 @@ function getAll(req,res){
   db.Student.find(function (err, data) {
     db.Student.count({},function(err,count){
     if(err){
-    log.error('400'+err);
-    return err;
+	    log.error('400'+err);
+	    return err;
     }
     else{
-    log.info('200');
-    res.setHeader('Content-Type','application/json');
-    res.status(200);
-    console.log(count);
-    data.unshift({count: count});
-    var countData = JSON.stringify(data);
-    res.end(countData);
-    return data;
+	    log.info('200');
+	    res.setHeader('Content-Type','application/json');
+	    res.status(200);
+	    console.log(count);
+	    data.unshift({count: count});
+	    var countData = JSON.stringify(data);
+	    res.end(countData);
+	    return data;
     }
      });
   });
@@ -72,15 +72,15 @@ function getByName(req,res,name){
 function addToTable(req,res,fs){
     db.Student.insert(fs, function(err,data){
       if(err){
-      log.error('400'+err);
-      return err;
+	      log.error('400'+err);
+	      return err;
       }
       else{
-      log.info('200');
-      res.setHeader('Content-Type','application/json');
-      res.status(200);
-      res.end(JSON.stringify(data));
-      return data;
+	      log.info('200');
+	      res.setHeader('Content-Type','application/json');
+	      res.status(200);
+	      res.end(JSON.stringify(data));
+	      return data;
       }
     });
 }
@@ -88,8 +88,8 @@ function addToTable(req,res,fs){
 function delAllFromTable(req,res){
   db.Student.remove({}, function(err,data){
     if(err){
-    log.error('400'+err);
-    return err;
+	    log.error('400'+err);
+	    return err;
     }
     else{
       log.info('200');
@@ -104,8 +104,8 @@ function delAllFromTable(req,res){
 function delOneFromTable(req,res,name){
   db.Student.remove({name : name}, true, function(err,data){
     if(err){
-    log.error('400'+err);
-    return err;
+	    log.error('400'+err);
+	    return err;
     }
     else{
       log.info('200');
